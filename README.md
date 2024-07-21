@@ -1,4 +1,3 @@
-
 <!-- Edit README.md, not index.md -->
 
 # Aider is AI pair programming in your terminal
@@ -77,7 +76,7 @@ Pair program with AI.
 - [Add images to the chat](https://aider.chat/docs/usage/images-urls.html) (GPT-4o, Claude 3.5 Sonnet, etc).
 - [Add URLs to the chat](https://aider.chat/docs/usage/images-urls.html) and aider will read their content.
 - [Code with your voice](https://aider.chat/docs/usage/voice.html).
-
+- Aider allows adding specified prompts via CLI arguments or Yaml configuration.
 
 ## Top tier performance
 

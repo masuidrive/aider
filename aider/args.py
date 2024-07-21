@@ -193,6 +193,12 @@ def get_parser(default_config_files, git_root):
             " max_chat_history_tokens."
         ),
     )
+    group.add_argument(
+        "--system-prompt",
+        metavar="SYSTEM_PROMPT",
+        env_var="SYSTEM_PROMPT",
+        help="Specify additional prompts to append to the system prompt",
+    )
     # This is a duplicate of the argument in the preparser and is a no-op by this time of
     # argument parsing, but it's here so that the help is displayed as expected.
     group.add_argument(

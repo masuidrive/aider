@@ -232,6 +232,7 @@ class Coder:
         attribute_commit_message=False,
         aider_commit_hashes=None,
         map_mul_no_files=8,
+        system_prompt=None,
     ):
         if not fnames:
             fnames = []
@@ -371,6 +372,8 @@ class Coder:
             if self.verbose:
                 self.io.tool_output("JSON Schema:")
                 self.io.tool_output(json.dumps(self.functions, indent=4))
+
+        self.system_prompt = system_prompt
 
     def setup_lint_cmds(self, lint_cmds):
         if not lint_cmds:
@@ -751,6 +754,10 @@ class Coder:
             lazy_prompt=lazy_prompt,
             platform=platform_text,
         )
+
+        if self.system_prompt:
+            prompt += "\n" + self.system_prompt
+
         return prompt
 
     def format_messages(self):
